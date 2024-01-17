@@ -20,7 +20,14 @@ jobs:
     name: Build .apk file
     runs-on: ubuntu-latest
     steps:
-#      - run: flutter build apk --release --verbose
+      - name: Build APK
+        working-directory: ./src
+        run: |
+          flutter doctor
+          flutter build apk --release --verbose
+
+      #      - run: flutter build apk --release --verbose
+
       - name: Create Release
         uses: ncipollo/release-action@v1.10.0
         with:
