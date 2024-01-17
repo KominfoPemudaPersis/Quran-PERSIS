@@ -7,7 +7,7 @@ on:
         required: true
         type: string
       name:
-        description: 'The name of the app'
+        description: 'QuranPERSIS'
         required: true
         type: string
       group:
