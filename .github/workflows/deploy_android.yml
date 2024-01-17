@@ -20,7 +20,14 @@ jobs:
     name: Build .apk file
     runs-on: ubuntu-latest
     steps:
-      - run: flutter build apk --release --verbose
+#      - run: flutter build apk --release --verbose
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: APK_Releases
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/app-release.aab
   Deploy:
     name: Deploy file to AppCenter
     needs: [ build ]
