@@ -37,4 +37,5 @@ jobs:
         uses: charliealbright/appcenter-cli-action@v1.0.1
         with:
           token: ${{secrets.APPCENTER_API_TOKEN}}
-          command: 'appcenter distribute release -f ${{inputs.file}} --app ${{inputs.name}} --group ${{inputs.group}}'
+          #          command: 'appcenter distribute release -f ${{inputs.file}} --app ${{inputs.name}} --group ${{inputs.group}}'
+          command: 'appcenter distribute release -f ${{inputs.file}}  --group ${{inputs.group}}'
