@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build APK
-        working-directory: ./src
+#        working-directory: ./src
         run: |
           flutter doctor
           flutter build apk --release --verbose
