@@ -2,7 +2,7 @@ name: Deploy iOS App on AppCenter
 on: workflow_call
 jobs:
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: flutter build ipa --release --verbose --no-codesign
   # Deploy:
